@@ -1,0 +1,3 @@
+[submodule "discovery_piscine-rush"]
+	path = discovery_piscine-rush
+	url = https://github.com/kcp2p/discovery_piscine-rush.git

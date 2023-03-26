@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script>
+
+            const calculate = () => {
+
+                const operand1 = parseFloat(document.getElementById('inp1').value)
+                const operator = document.getElementById('ops').value
+                const operand2 = parseFloat(document.getElementById('inp2').value)
+
+                let res
+
+                if (operand1 < 0 || operand2 < 0) {
+                    alert('Error :(')
+                    return
+                }
+
+                switch (operator) {
+
+                    case '+':
+                        res = operand1 + operand2
+                        console.log(res)
+                        alert(res)
+                        break;
+                        
+                    case '-':
+                        res = operand1 - operand2
+                        console.log(res)
+                        alert(res)
+                        break;
+                        
+                    case '*':
+                        res = operand1 * operand2
+                        console.log(res)
+                        alert(res)
+                        break;
+                        
+                    case '/':
+                        
+                        res = operand1 / operand2
+                        
+                        if (res == Infinity) {
+                            console.log(res)
+                            alert('It’s over 9000!') 
+                            break;
+                        }
+
+                        console.log(res)
+                        alert(res)
+
+                    break;
+                
+                    case '%':
+
+                        res = operand1 % operand2
+                        
+                        if (isNaN(res)) {
+                            console.log(res)
+                            alert('It’s over 9000!') 
+                            break;
+                        }
+
+                        console.log(res)
+                        alert(res)
+                        
+                        break;
+                
+                    default:
+                        alert('Error :(')
+                        break;
+
+                }
+
+            }
+
+            setInterval(() => {alert('Please, use me...')}, 30000)
+
+        </script>
+
+    </head>
+
+    <body>
+        <form action="">
+            <input type="text" id="inp1" name="inp1">
+            <select type="text" id="ops" name="ops">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+                <option>%</option>
+            </select>
+            <input type="text" id="inp2" name="inp2">
+            <button onclick="calculate()">Try me!</button>
+        </form>
+    </body>
+
+</html>

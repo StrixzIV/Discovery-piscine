@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+            <title>Document</title>
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+            <script>
+                
+                $('document').ready(() => {
+
+                    const operators = ['+', '-', '*', '/', '%']
+
+                    jQuery('<input>', {
+                        type: 'text',
+                        id: 'operand1'
+                    }).appendTo('body')
+
+                    jQuery('<select>', {
+                        type: 'text',
+                        id: 'operator'
+                    }).appendTo('body')
+                    
+                    operators.forEach(ops => {
+                        jQuery('<option>', {
+                            text: ops
+                        }).appendTo('#operator')
+                    })
+
+                    jQuery('<input>', {
+                        type: 'text',
+                        id: 'operand2'
+                    }).appendTo('body')
+                   
+                    jQuery('<button>', {
+                        id: 'btn',
+                        text: 'Try me!'
+                    }).appendTo('body')
+
+                    $('#btn').click(() => {
+
+                        const operand1 = parseFloat($('#operand1').val())
+                        const opt = $('#operator').val()
+                        const operand2 = parseFloat($('#operand2').val())
+
+                        let ans;
+
+                        if (isNaN(operand1) || isNaN(operand2) || operand1 < 0 || operand2 < 0) {
+                            alert('Error :(')
+                            return
+                        }
+
+                        switch (opt) {
+
+                            case '+':
+                                ans = operand1 + operand2
+                                break;
+
+                            case '-':
+                                ans = operand1 - operand2                                
+                                break;
+
+                            case '*':
+                                ans = operand1 * operand2
+                                break;
+
+                            case '/':
+                                
+                                ans = operand1 / operand2
+
+                                if (ans == Infinity) {
+                                    alert('It\'s over 9000!')
+                                    console.log(ans)
+                                    return
+                                }
+
+                                break;
+
+                            case '%':
+                                
+                                ans = operand1 % operand2
+
+                                if (isNaN(ans)) {
+                                    alert('It\'s over 9000!')
+                                    console.log(ans)
+                                    return
+                                }
+
+                                break;
+
+                            default:
+                                ans = 'Error :('
+                                break;
+                        }
+
+                        alert(ans)
+                        console.log(ans)
+
+                    })
+
+                })
+
+                setInterval(() => {alert('Please, use me...')}, 30000)
+
+            </script>
+
+    </head>
+
+</html>

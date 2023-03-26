@@ -1,0 +1,22 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+    height: 100vh;
+    text-align: left;
+}
+
+.text {
+    font-size: 5em;
+}
+
+.colA {
+    background-color: greenyellow;
+}
+
+.colB {
+    background-color: pink;
+}

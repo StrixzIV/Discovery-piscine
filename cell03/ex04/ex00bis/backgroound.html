@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Document</title>
+
+        <link rel="stylesheet" href="backgroound.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(() => {
+
+                jQuery('<button>', {
+                    id: 'btn',
+                    text: 'Press me!'
+                }).appendTo('body')
+                
+                $('#btn').click(() => {
+                    const rand_color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+                    $('body').css('background-color', rand_color)
+                })
+
+            })
+        </script>
+
+    </head>
+
+
+    </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A one-page personal portfolio of Jirayu Kaewsing showcasing his skills, experiences, and methods to contact him.">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="script.js"></script>
+        <title>jkaewsin's Portfolio</title>
+    </head>
+
+    <body>
+
+        <header class="h-screen pt-4 overflow-hidden" id="header">
+
+            <div class="text-center h-full relative">
+
+                <h5 class="font-medium mt-8">Hello I'm</h5>
+                <h1 class="font-medium text-5xl mt-4">Jirayu Kaewsing</h1>
+                <h5 class="font-medium text-white text-opacity-60 mt-4">(Almost) Full-stack Developer</h5>
+
+                <div class="mt-8">
+                    <a href="#contact" class="btn">Contact me!</a>
+                </div>
+
+                <div class="w-96 h-96 absolute mt-8 overflow-hidden left-[calc(50%_-_12rem)]">
+                    <img class="rounded-3xl" src="https://cdn.discordapp.com/attachments/1029397271911075850/1089045903131816068/IMG_2823.jpg" width="1024" height="1024" alt="jkaewsin">
+                </div>
+
+                <div class="social-container flex flex-col text-center gap-3.5 absolute left-0 bottom-20 ml-12 mb-8">
+                    <a href="https://strixziv-portfolio.web.app/"><i class="social-icons fa-solid fa-code"></i></a> 
+                    <a href="https://github.com/StrixzIV"><i class="social-icons fa-brands fa-github"></i></a> 
+                    <a href="https://www.instagram.com/strixziv_/"><i class="social-icons fa-brands fa-instagram"></i></a> 
+                    <a href="https://www.facebook.com/profile.php?id=100016329570565"><i class="social-icons fa-brands fa-facebook"></i></a> 
+                </div>
+
+            </div>
+
+        </header>
+
+        <section class="h-screen pt-16 overflow-hidden" id="about">
+
+            <div class="text-center relative">
+
+                <h1 class="font-medium text-5xl mt-4">Experiences</h1>
+
+                <div class="experience-container">
+
+                    <div class="experience-card">
+                        <i class="about-icons fab fa-python"></i>
+                        <h4>Python</h4>
+                        <div class="m-4 text-left">
+                            <article class="mt-2"><strong>- AI & Data Science:</strong> NumPy, SciPy, Scikit-learn, Pandas, Matplotlib, Tensorflow, OpenCV</article>
+                            <article class="mt-2"><strong>- Backend:</strong> Flask, FastAPI, Django, Uvicorn, Waitress, Stremlit</article>
+                            <article class="mt-2"><strong>- Other:</strong> Discord.py, cryptography, click</article>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <i class="about-icons fa-brands fa-js"></i>
+                        <h4>JavaScript & Typescript</h4>
+                        <div class="m-4 text-left">
+                            <article class="mt-2"><strong>- Front-end framework:</strong> React.js, React-Native, Astro.js, Electron.js</article>
+                            <article class="mt-2"><strong>- Backend:</strong> Tensorflow.js, express.js, tauri </article>
+                            <article class="mt-2"><strong>- Other:</strong> Discord.js, Three.js, firebase</article>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <i class="about-icons fa-solid fa-bolt"></i>
+                        <h4>Electronics & IoT</h4>
+                        <div class="m-4 text-left">
+                            <article class="mt-2"><strong>- Projects:</strong> Lambda project, blindstick project</article>
+                            <article class="mt-2"><strong>- Microcontrollers:</strong> Arduino, ESP32, RaspberryPi, Kidbright</article>
+                            <article class="mt-2"><strong>- IoT Platforms:</strong> KidbrightAI, NodeRED</article>
+                        </div>
+                    </div>
+
+                </div>
+
+        </section>
+
+        <nav id="nav">
+            <a href="#header"><i class="fa fa-home"></i></a>
+            <a href="#about"><i class="fa fa-star"></i></a>
+            <a href="#contact"><i class="fa-solid fa-circle-user"></i></a>
+        </nav>
+
+    </body>
+
+</html>

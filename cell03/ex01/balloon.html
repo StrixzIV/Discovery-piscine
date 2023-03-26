@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .balloon {
+                border-radius: 100%;
+                background-color: red;
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+
+        <script>
+
+            let width = 200
+            let height = 200
+            let click_counter = 0
+            const colors = ['red', 'green', 'blue']
+            
+            const expand_ballon = () => {
+
+                const balloon = document.getElementById('balloon')
+                click_counter += 1
+
+                if (width <= 420 && height <= 420) {
+                    width += 10
+                    height += 10
+                    balloon.style.width = `${width}px`
+                    balloon.style.height = `${height}px`
+                    balloon.style.backgroundColor = colors[click_counter % 3]
+                    return
+                }
+
+                width = 200
+                height = 200
+                balloon.style.width = '200px'
+                balloon.style.height = '200px'
+                balloon.style.backgroundColor = colors[click_counter % 3]
+
+
+            }
+
+            const deflate_on_mouse_out = () => {
+
+                const balloon = document.getElementById('balloon')
+                click_counter -= 1
+                
+                if (width <= 200 && height <= 200) {
+                    width = 200
+                    height = 200
+                    balloon.style.width = '200px'
+                    balloon.style.height = '200px'
+                    balloon.style.backgroundColor = colors[click_counter % 3]
+                    return
+                }
+
+                width -= 5
+                height -= 5
+                balloon.style.width = `${width}px`
+                balloon.style.height = `${height}px`
+                balloon.style.backgroundColor = colors[click_counter % 3]
+
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <div class="balloon" onclick="expand_ballon()" onmouseout="deflate_on_mouse_out()" id="balloon"></div>    
+    </body>
+
+</html>
