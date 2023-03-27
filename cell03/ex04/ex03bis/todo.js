@@ -5,7 +5,7 @@ const setCookie = (cname, cvalue) => {
 const getCookie = (cname) => {
 
     let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
+    let decodedCookie = document.cookie;
     let ca = decodedCookie.split(';');
     
     for(let i = 0; i < ca.length; i++) {
@@ -50,6 +50,8 @@ $('document').ready(() => {
         todoContainer.empty()
         
         todoData.reverse().forEach(todo => {
+
+            todo = decodeURIComponent(todo)
     
             const todoItem = jQuery('<li>', {
                 text: todo,
@@ -73,7 +75,7 @@ $('document').ready(() => {
     $('#btn').click(() => {
 
         let cookieData = getCookie('todoData')
-        const input = prompt('Please enter your TODO:')
+        const input = encodeURIComponent(prompt('Please enter your TODO:'))
     
         if (!input || input.trim() === '') {
             return
