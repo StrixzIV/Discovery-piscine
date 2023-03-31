@@ -75,11 +75,13 @@ $('document').ready(() => {
     $('#btn').click(() => {
 
         let cookieData = getCookie('todoData')
-        const input = encodeURIComponent(prompt('Please enter your TODO:'))
-    
+        let input = prompt('Please enter your TODO:')
+        
         if (!input || input.trim() === '') {
             return
         }
+
+        input = encodeURIComponent(input)
     
         if (cookieData === '') {
             setCookie('todoData', input)
